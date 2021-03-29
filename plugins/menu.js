@@ -70,12 +70,12 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╭─「 ${conn.user.name} 」
 │ Olá, %name!
 │
-│ Uptime: *%uptime*
+│ Tempo ativo: *%uptime*
 │ Database: %totalreg usuários
 ╰────
 %readmore`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│ • %cmd%islimit'
+    let header = conn.menu.header || '╭─ ⌜%category⌟'
+    let body   = conn.menu.body   || '│ ▶ %cmd%islimit'
     let footer = conn.menu.footer || '╰────\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `J e a n n n`
     let _text  = before + '\n'
