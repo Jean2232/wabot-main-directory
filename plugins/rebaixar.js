@@ -1,8 +1,8 @@
-let handler = async (m, { conn, args, usedPrefix }) => {
+let handler = async (m, { conn, args }) => {
   let users = m.mentionedJid
-  for (let user of users) conn.groupDemoteAdmin(m.chat, user).catch(console.log)
+  conn.groupDemoteAdmin(m.chat, users)
 }
-handler.help = ['rebaixar'].map(v => v + ' @admin')
+handler.help = ['rebaixar'].map(v => 'o' + v + ' @admin')
 handler.tags = ['admin']
 handler.command = /^rebaixar$/i
 handler.owner = false
@@ -12,9 +12,8 @@ handler.group = true
 handler.private = false
 
 handler.admin = true
-handler.botAdmin = true
+handler.botAdmin = false
 
 handler.fail = null
 
 module.exports = handler
-

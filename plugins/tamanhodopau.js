@@ -8,7 +8,7 @@ conn.reply(m.chat, `
     }
   } : {})
 }
-handler.help = ['tamanhodopau <@membro>?']
+handler.help = ['tamanhodopau <@membro>']
 handler.tags = ['kerang']
 handler.command = /^tamanhodopau$/i
 handler.owner = false

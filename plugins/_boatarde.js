@@ -1,17 +1,13 @@
 let handler = m => m
 
-let linkRegex = /boa tarde/i
+let recebido = /boa tarde/i
 handler.before = function (m, { user }) {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
-  let isGroupLink = linkRegex.exec(m.text)
+  let isGroupLink = recebido.exec(m.text)
 
-  if (chat.antiLink && isGroupLink) {
+  if (chat.interacoes && isGroupLink) {
     m.reply('Boa tarde, amigo')
-    if (global.opts['restrict']) {
-      // if (!user.isAdmin) return true
-      // this.groupRemove(m.chat, [m.sender])
-    }
   }
   return true
 }

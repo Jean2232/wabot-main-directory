@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Uhm...url nya mana?'
+  if (!args[0]) throw 'Cadê o Url?'
   let res = await fetch(global.API('xteam', '/dl/fb', {
     url: args[0]
   }, 'APIKEY'))
@@ -38,10 +38,10 @@ Keyword: ${keywords || none}
 `.trim()
   conn.sendFile(m.chat, url, 'media-fb', caption, m)
 }
-handler.help = ['fb'].map(v => v + ' <url>')
+handler.help = ['facebook'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
-handler.command = /^f((b|acebook)(dl|download)?(er)?)$/i
+handler.command = /^facebook$/i
 
 module.exports = handler
 

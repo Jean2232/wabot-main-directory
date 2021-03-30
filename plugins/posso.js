@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, text }) => {
     }
   } : {})
 }
-handler.help = ['posso <pergunta>?']
+handler.help = ['posso <pergunta>']
 handler.tags = ['kerang']
 handler.command = /^posso$/i
 handler.owner = false

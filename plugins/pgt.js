@@ -8,7 +8,7 @@ let handler = async (m, { conn, command, text }) => {
     }
   } : {})
 }
-handler.help = ['pgt <pergunta>?']
+handler.help = ['pgt <pergunta>']
 handler.tags = ['kerang']
 handler.command = /^pgt$/i
 handler.owner = false
