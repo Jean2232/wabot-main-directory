@@ -41,6 +41,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'downloader': 'Downloader',
      'admin': 'Admins',
       'group': 'Grupos',
+      'interruptores': 'Funções Ativaveis',
       'premium': 'Mods',
       'kerang': 'Interações',
       'info': 'Informações',
@@ -70,7 +71,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╭─「 ${conn.user.name} 」
 │ Olá, %name!
 │
-│ Uptime: *%uptime*
+│ Este bot é apenas um
+│ projeto pessoal, não abuse!
+│
+│ Tempo de atividade: *%uptime*
 │ Database: %totalreg usuários
 ╰────
 %readmore`

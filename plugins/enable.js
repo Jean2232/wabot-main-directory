@@ -12,7 +12,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'delete':
       chat.delete = isEnable
       break
-    case 'antidelete':
+     case 'antidelete':
       chat.delete = !isEnable
       break
     case 'public':
@@ -32,17 +32,17 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       break
     default:
       return m.reply(`
-List option: welcome | delete | public 
+Opções: welcome | delete
 
 Exemplo:
 ${usedPrefix}ativar welcome
 ${usedPrefix}desativar welcome
 `.trim())
   }
-  m.reply(`Recurso ativado`.trim())
+  m.reply(`Feito!`.trim())
 }
-handler.help = ['a', 'desa'].map(v => v + 'tivar <opção>')
-handler.tags = ['group', 'owner']
+handler.help = ['a', 'desa'].map(v => v + 'tivar welcome \n | -Modo de Boas vindas')
+handler.tags = ['interruptores', 'owner']
 handler.command = /^((a|desa)tivar|(turn)?o(n|ff))$/i
 
 module.exports = handler
