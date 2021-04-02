@@ -9,6 +9,9 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'welcome':
       chat.welcome = isEnable
       break
+      case 'interacoes':
+        chat.interacoes = isEnable
+        break
     case 'delete':
       chat.delete = isEnable
       break
@@ -32,7 +35,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       break
     default:
       return m.reply(`
-Opções: welcome | delete
+Opções: welcome | delete | interacoes
 
 Exemplo:
 ${usedPrefix}ativar welcome
@@ -41,7 +44,7 @@ ${usedPrefix}desativar welcome
   }
   m.reply(`Feito!`.trim())
 }
-handler.help = ['a', 'desa'].map(v => v + 'tivar welcome \n | -Modo de Boas vindas')
+handler.help = ['ativar welcome', 'desativar welcome', 'ativar interacoes', 'desativar interacoes']
 handler.tags = ['interruptores', 'owner']
 handler.command = /^((a|desa)tivar|(turn)?o(n|ff))$/i
 
