@@ -44,6 +44,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'interruptores': 'Funções Ativaveis',
       'premium': 'Mods',
       'kerang': 'Interações',
+      'avisos': 'Avisos',
       'info': 'Informações',
 
     }
@@ -73,6 +74,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │
 │ Este bot é apenas um
 │ projeto pessoal, não abuse!
+│ 
+│ Leia o menu até o final! Há
+│ Informações importantes no quadro
+│ de avisos!!!!!!!!!!!
 │
 │ Tempo de atividade: *%uptime*
 │ Database: %totalreg usuários

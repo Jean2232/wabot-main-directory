@@ -1,8 +1,8 @@
 let handler = function (m) {
-  if (!m.quoted) throw 'Reply pesan bot!'
+  if (!m.quoted) throw 'Responda para uma mensagem do bot!'
   let { fromMe, id, isBaileys } = m.quoted
-  if (!fromMe) throw 'Hanya bisa menghapus pesan dariku'
-  if (!isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
+  if (!fromMe) throw 'bah'
+  if (!isBaileys) throw 'Eu só posso apagar minhas mensagens, né'
   this.deleteMessage(m.chat, {
     fromMe,
     id,
