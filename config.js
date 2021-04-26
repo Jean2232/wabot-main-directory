@@ -22,7 +22,7 @@ let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
-  console.log(chalk.redBright("Alteração em 'config.js'"))
+  console.log(chalk.redBright("Update 'config.js'"))
   delete require.cache[file]
   require(file)
 })
