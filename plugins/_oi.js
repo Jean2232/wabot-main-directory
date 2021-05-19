@@ -7,7 +7,7 @@ handler.before = function (m, { user }) {
   let isGroupLink = recebido.exec(m.text)
 
   if (chat.interacoes && isGroupLink) {
-    m.reply('OOIIEEE! Digite .? para ver minhas funções :)')
+    m.reply('Olá. Digite .? para ver minhas funções')
   }
   return true
 }
