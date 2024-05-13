@@ -1,1 +1,1 @@
-# JeanBot
+# Descontinuado.
